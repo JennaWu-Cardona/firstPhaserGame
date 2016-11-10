@@ -4,7 +4,7 @@ game_state.story = function() {};
 game_state.story.prototype = {
 
     preload: function() {
-        game.load.image('sky', 'assets/sky.png');
+        game.load.image('sky', 'assets/snowbackground2.png');
         game.load.image('ground', 'assets/platform.png');
         game.load.spritesheet('snowman2', 'assets/snowman2.png', 144, 144);
         // game.load.image('sun', 'assets/sun.png');

@@ -9,12 +9,12 @@ game_state.main = function() {};
 game_state.main.prototype = {
 
     preload: function() {
-        game.load.image('sky', 'assets/sky.png');
+        game.load.image('sky', 'assets/snowbackground2.png');
         game.load.image('ground', 'assets/platform.png');
         game.load.image('snowflake', 'assets/snowflake.png');
         game.load.spritesheet('snowman2', 'assets/snowman2.png', 144, 144);
         game.load.image('sun', 'assets/sun.png');
-        game.load.image('snowbackground', 'snowbackground.jpg');
+        // game.load.image('snowbackground', 'snowbackground.jpg');
     },
 
 
@@ -101,7 +101,7 @@ game_state.main.prototype = {
         //the this.score
         this.scoreText = game.add.text(16, 16, 'Score: 0', {
             fontSize: '32px',
-            fill: '#000'
+            fill: 'aliceblue'
         });
         this.score = 0;
 
@@ -146,10 +146,12 @@ game_state.main.prototype = {
         // game.debug.body(this.player);
         // game.debug.body(this.snowflake);
         
-        if (this.score === 5) {
-            game.add.text(230, 300, 'Yay! Thanks for making me not melt!', {
+        if (this.score === 2) {
+            game.add.text(230, 50, 'Yay! Thanks for making me not\nmelt by catching the snowflakes!', {
                 fontSize: '32px',
-                fill: '#000'
+                fill: 'aliceblue'
+        // this.player.scale.setTo(0.9, 0.9);
+        // this.player.body.setSize(74, 114, 23, 13);
 
             })}
         },
@@ -168,7 +170,7 @@ game_state.main.prototype = {
         // here we'll create 15 of them evenly spaced apart
         var i = 0;
         i < 1;
-        i++
+        i++;
         //create a snowflake inside of the 'this.snowflake' group
         this.snowflake = this.snowflakes.create(Math.random() * 800, 0, 'snowflake');
         // this.snowflake = Math.random;
