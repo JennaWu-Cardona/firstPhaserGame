@@ -146,7 +146,7 @@ game_state.main.prototype = {
         // game.debug.body(this.player);
         // game.debug.body(this.snowflake);
         
-        if (this.score === 2) {
+        if (this.score === 50) {
             game.add.text(230, 50, 'Yay! Thanks for making me not\nmelt by catching the snowflakes!', {
                 fontSize: '32px',
                 fill: 'aliceblue'
